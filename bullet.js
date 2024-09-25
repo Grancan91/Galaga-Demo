@@ -4,8 +4,8 @@ function Bullet (x, y, playField, enemies) {
   this.y = y
   this.width = 5
   this.height = 5
-  this.direcction = 1
-  this.speed = 10
+  this.direcction = -1
+  this.speed = 30
   this.sprite = document.createElement('div')
 
   this.insertBullet = function () {
@@ -18,4 +18,26 @@ function Bullet (x, y, playField, enemies) {
     playField.appendChild(this.sprite)
   }
 
+  this.move = function () {
+    //self.checkPlayerCollision()
+    let newY = self.y + self.speed * self.direcction
+    // Check playField limits
+    // playField width : 600px
+    // playField height : 700px
+    let yBotLimit = 700 - self.height
+    let yTopLimit = 0
+    if(newY <= yBotLimit && newY >= yTopLimit){
+      self.y = newY
+      self.sprite.style.top = self.y + 'px'
+      } else {
+        self.removeBullet()
+      }
+  }
+
+  this.removeBullet = function() {
+    clearInterval(self.bulletMoveInterval)
+    playField.removeChild(self.sprite)
+  }
+
+  this.bulletMoveInterval = setInterval(this.move, 100)
 }

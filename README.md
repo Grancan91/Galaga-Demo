@@ -85,3 +85,7 @@
   - Insert in Event Listener
   - Set position
   - Aplly Style
+
+# 16. Implement Bullet Move
+ - Add move function on bullet.
+ - Add remove function.
