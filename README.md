@@ -44,3 +44,8 @@
 # 7. Add KeyEvent Listener to set Move
   - window.eventListener
   - Switch case
+
+# 8. Smooth Movement
+  - Implement use of interval.
+  - Fix this isssue with self
+  - event listener to reset direcction on keyup.
