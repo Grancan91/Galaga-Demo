@@ -1,17 +1,30 @@
 let playField = document.getElementById('playfield')
 let player = new Player(275, 650, playField)
-let enemy = new Enemy(20, 20, playField)
+let enemies = []
+
 let playerMoveInterval
+let enemiesMoveInterval
 
 function startGame() {
 
   player.inserPlayer()
 
-  enemy.inserEnemy()
-  
-  
   playerMoveInterval = setInterval(player.move, 50)
 
+  enemiesMoveInterval = setInterval(createEnemies, 2000)
+  
+}
+
+function createEnemies() {
+  // Math.random -> create number between 0 and 0.99
+  // with * 10 -> number between 0 and 9.9
+  // with floor -> round -> 0 and 9
+  // with * 50 we have X coords.
+  let randomX = Math.floor(Math.random() * 10) * 50
+  let enemy = new Enemy(randomX, 20, playField)
+  enemy.inserEnemy()
+  //Logic for multy Enemies
+  enemies.push(enemy)
 }
 
 window.addEventListener('keydown', function(event) {

@@ -55,3 +55,9 @@
   - Add properties.
   - Add Insert function.
   - Add Enemy styles.
+
+# 10. Implement Random Enemy Spawn
+  - Add CreateEnemy function
+  - Obtain X coords to spawn with math.random
+  - Save enemies on array.
+  - SetInterval to continue enemySpawn.
