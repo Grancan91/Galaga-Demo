@@ -40,3 +40,7 @@
   - Calcule playField limits.
   - Check nextPosition are between playField limits.
   - Apply to Sprite.
+
+# 7. Add KeyEvent Listener to set Move
+  - window.eventListener
+  - Switch case

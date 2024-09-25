@@ -1,10 +1,10 @@
 function Player(x, y, playField) {
+  //If this don't work => let self = this
   this.x = x
   this.y = y
   this.width = 50
   this.height = 50
-  //this.direction = 0
-  this.direcction = 1 //Check Move
+  this.direcction = 0
   this.speed = 10
   this.sprite = document.createElement('div')
 
@@ -19,6 +19,7 @@ function Player(x, y, playField) {
   }
 
   this.move = function () {
+    //If this don't work => change this with self
     let newX = this.x + this.speed * this.direcction
     // Check playField limits
     // playField width : 600px

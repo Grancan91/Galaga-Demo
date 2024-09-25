@@ -6,9 +6,24 @@ function startGame() {
 
   player.inserPlayer()
 
-  //Check Move function
-  player.move()
 
 }
 
+window.addEventListener('keydown', function(event) {
+  console.log(event.key)
+  switch (event.key) {
+    case 'a':
+      player.direcction = -1
+      player.move()
+      break;
+    
+    case 'd':
+      player.direcction = 1
+      player.move()
+      break;
+  }
+})
+
+
 startGame()
+
