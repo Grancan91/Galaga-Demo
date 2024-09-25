@@ -3,7 +3,7 @@ function Bullet (x, y, playField, enemies) {
   this.x = x
   this.y = y
   this.width = 5
-  this.height = 5
+  this.height = 30
   this.direcction = -1
   this.speed = 30
   this.sprite = document.createElement('div')

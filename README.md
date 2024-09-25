@@ -99,3 +99,7 @@
  - Add start div to html
  - Add button to start game.
  - Add button to restart game.
+
+ # 19. Add some Style
+ - Style Start view
+ - Add images to sprites.

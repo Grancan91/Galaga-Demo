@@ -1,38 +1,104 @@
-h1{
+h1 {
   font-size: x-large;
 }
 
-#playfield{
+#playfield {
   width: 600px;
   height: 700px;
   background-color: rgb(32, 32, 49);
   margin: 0 auto;
   /* Player and Enemies will be position absolute on playfield*/
-  position: relative; 
+  position: relative;
   display: none;
 }
 
-#game-over{
+#start {
+  width: 600px;
+  height: 700px;
+  background-color: rgb(32, 32, 49);
+  margin: 0 auto;
+  /* Player and Enemies will be position absolute on playfield*/
+  position: relative;
+}
+
+#game-over {
+  width: 600px;
+  height: 700px;
+  background-color: rgb(32, 32, 49);
+  margin: 0 auto;
+  /* Player and Enemies will be position absolute on playfield*/
+  position: relative;
+}
+
+#start-container {
+  position: relative;
+  /* Establecer posición relativa para usar centramiento absoluto */
+  width: 100%;
+  height: 100%;
+}
+
+#restart-container {
+  position: relative;
+  /* Establecer posición relativa para usar centramiento absoluto */
+  width: 100%;
+  height: 100%;
+}
+
+#btn-start {
+  width: 200px;
+  /* Ajusta el tamaño del botón */
+  padding: 15px;
+  position: absolute;
+  /* Usamos posición absoluta para centrar el botón */
+  top: 50%;
+  /* Centrado vertical */
+  left: 50%;
+  /* Centrado horizontal */
+  transform: translate(-50%, -50%);
+  /* Ajusta el botón para que esté perfectamente centrado */
+}
+
+#btn-restart {
+  width: 200px;
+  /* Ajusta el tamaño del botón */
+  padding: 15px;
+  position: absolute;
+  /* Usamos posición absoluta para centrar el botón */
+  top: 50%;
+  /* Centrado vertical */
+  left: 50%;
+  /* Centrado horizontal */
+  transform: translate(-50%, -50%);
+  /* Ajusta el botón para que esté perfectamente centrado */
+}
+
+#game-over {
   display: none;
 }
 
 #player {
-/*   width: 50px;
+  /*   width: 50px;
   height: 50px; */
-  background-color: aquamarine;
   position: absolute;
+  background-image: url('./sprites/ship.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .enemy {
   /*   width: 50px;
     height: 50px; */
-    background-color: rgb(222, 20, 20);
-    position: absolute;
-  }
+  background-image: url('./sprites/alien.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
 
-  .bullet {
-    /*   width: 50px;
+.bullet {
+  /*   width: 50px;
       height: 50px; */
-      background-color: rgb(247, 255, 4);
-      position: absolute;
-    }
+  background-image: url('./sprites/maverick.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
