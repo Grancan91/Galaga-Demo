@@ -30,3 +30,13 @@
   - Update Player params -> get playfield.
   - With playfield use appendChild on Insert Method.
   - Add Styles to see Player in playField
+
+# 5. Refactor
+  - Add startGame function.
+  - Add dinamic width and height player style
+
+# 6. Add Player Movement
+  - Add move function to Player.
+  - Calcule playField limits.
+  - Check nextPosition are between playField limits.
+  - Apply to Sprite.

@@ -6,6 +6,9 @@ function startGame() {
 
   player.inserPlayer()
 
+  //Check Move function
+  player.move()
+
 }
 
 startGame()
