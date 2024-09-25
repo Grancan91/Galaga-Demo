@@ -95,3 +95,7 @@
  - Send enemies to Bullet.
  - Remove Bullet and Enemy
 
+# 18. Add Start view.
+ - Add start div to html
+ - Add button to start game.
+ - Add button to restart game.

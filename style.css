@@ -9,6 +9,11 @@ h1{
   margin: 0 auto;
   /* Player and Enemies will be position absolute on playfield*/
   position: relative; 
+  display: none;
+}
+
+#game-over{
+  display: none;
 }
 
 #player {
