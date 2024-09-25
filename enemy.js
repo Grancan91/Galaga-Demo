@@ -18,9 +18,11 @@ function Enemy (x, y, playField, enemies) {
     playField.appendChild(this.sprite)
   }
 
-  this.removeEnemy = function () {
+  this.removeEnemy = function (index) {
     if(self.y >= 700 ){
       enemies.shift()
+    } else {
+      enemies.splice(index, 1)
     }
     clearInterval(this.enemyMoveInterval)
     playField.removeChild(this.sprite)
@@ -50,7 +52,8 @@ function Enemy (x, y, playField, enemies) {
       self.y = newY
       self.sprite.style.top = self.y + 'px'
       } else {
-        self.removeEnemy()
+      self.removeEnemy()
+      enemies.shift()  //Fix enemy remove on collisión with player
       }
   }
 

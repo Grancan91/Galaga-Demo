@@ -55,7 +55,7 @@ window.addEventListener('keydown', function(event) {
 a
       case ' ':
         let bulletInitialPos = player.x + player.width / 2
-        let bullet = new Bullet(bulletInitialPos, 640, playField)
+        let bullet = new Bullet(bulletInitialPos, 640, playField, enemies)
         bullet.insertBullet()
         break;
   }

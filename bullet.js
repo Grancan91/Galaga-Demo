@@ -19,7 +19,7 @@ function Bullet (x, y, playField, enemies) {
   }
 
   this.move = function () {
-    //self.checkPlayerCollision()
+    self.checkEnemyCollision()
     let newY = self.y + self.speed * self.direcction
     // Check playField limits
     // playField width : 600px
@@ -37,6 +37,21 @@ function Bullet (x, y, playField, enemies) {
   this.removeBullet = function() {
     clearInterval(self.bulletMoveInterval)
     playField.removeChild(self.sprite)
+  }
+
+  this.checkEnemyCollision = function () {
+    enemies.forEach(function(enemy, index){
+      if ( self.x < enemy.x + enemy.width &&
+        self.y < enemy.y + enemy.height &&
+        self.x + self.width > enemy.x &&
+        self.y + self.height > enemy.y) {
+          // collision detected!
+          console.log('Target!')
+          enemy.removeEnemy(index)
+          self.removeBullet()
+          //enemies.shift() -> Implement on removeEnemy function.
+        }
+      });
   }
 
   this.bulletMoveInterval = setInterval(this.move, 100)

@@ -89,3 +89,9 @@
 # 16. Implement Bullet Move
  - Add move function on bullet.
  - Add remove function.
+
+# 17. Implement Bullet Collisions with Enemies
+ - Check Collision with all Enemies
+ - Send enemies to Bullet.
+ - Remove Bullet and Enemy
+
