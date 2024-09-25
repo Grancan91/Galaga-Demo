@@ -49,3 +49,9 @@
   - Implement use of interval.
   - Fix this isssue with self
   - event listener to reset direcction on keyup.
+
+# 9. Creating Enemy and Insert
+  - Create Enemy.js
+  - Add properties.
+  - Add Insert function.
+  - Add Enemy styles.

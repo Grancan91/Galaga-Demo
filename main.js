@@ -1,10 +1,14 @@
 let playField = document.getElementById('playfield')
 let player = new Player(275, 650, playField)
+let enemy = new Enemy(20, 20, playField)
 let playerMoveInterval
 
 function startGame() {
 
   player.inserPlayer()
+
+  enemy.inserEnemy()
+  
   
   playerMoveInterval = setInterval(player.move, 50)
 
