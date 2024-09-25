@@ -1,4 +1,4 @@
-function Enemy (x, y, playField) {
+function Enemy (x, y, playField, enemies) {
   let self = this
   this.x = x
   this.y = y
@@ -18,19 +18,30 @@ function Enemy (x, y, playField) {
     playField.appendChild(this.sprite)
   }
 
+  this.removeEnemy = function () {
+    if(self.y >= 700 ){
+      enemies.shift()
+    }
+    clearInterval(this.enemyMoveInterval)
+    playField.removeChild(this.sprite)
+  }
+
   this.move = function () {
     let newY = self.y + self.speed * self.direcction
     // Check playField limits
-    // playField width : 600py
-    // playField height : 800px
-    let yBotLimit = 800 - self.width
+    // playField width : 600px
+    // playField height : 700px
+    let yBotLimit = 700 - self.height
     let yTopLimit = 0
+    console.log(newY)
     if(newY <= yBotLimit && newY >= yTopLimit){
       self.y = newY
       self.sprite.style.top = self.y + 'px'
+      } else {
+        self.removeEnemy()
       }
-
   }
 
-  this.enemyMoveInterval = setInterval(this.move, 300)
+  this.enemyMoveInterval = setInterval(this.move, 100)
+
 }

@@ -21,7 +21,7 @@ function createEnemies() {
   // with floor -> round -> 0 and 9
   // with * 50 we have X coords.
   let randomX = Math.floor(Math.random() * 10) * 50
-  let enemy = new Enemy(randomX, 20, playField)
+  let enemy = new Enemy(randomX, 20, playField, enemies)
   enemy.inserEnemy()
   //Logic for multy Enemies
   enemies.push(enemy)

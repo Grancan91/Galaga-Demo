@@ -66,3 +66,6 @@
   - Add move to enemy.js
   - Set movement range.
   - set Interval for enemyMovement
+
+# 12. Add Remove Enemy Function.
+  - Add function to remove Enemy
