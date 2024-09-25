@@ -23,3 +23,10 @@
   - Add Properties. (x, y, width, height, direcction, speed)
  ## Create new Player on main.js
   - Test createt Player on console.
+
+# 4. Insert Player on playfield.
+  - Add Sprite property.
+  - Add method Insert in Player.js to set Id, and positions.
+  - Update Player params -> get playfield.
+  - With playfield use appendChild on Insert Method.
+  - Add Styles to see Player in playField
