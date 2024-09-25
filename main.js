@@ -1,1 +1,1 @@
-console.log('main.js test')
+let playfield = document.getElementById('playfield')
