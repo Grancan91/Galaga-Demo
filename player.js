@@ -11,6 +11,9 @@ function Player(x, y, playField) {
     this.sprite.setAttribute('id', 'player')
     this.sprite.style.top = this.y + 'px'
     this.sprite.style.left = this.x + 'px'
+    this.sprite.style.width = this.width + 'px'
+    this.sprite.style.height = this.height + 'px'
+
     playField.appendChild(this.sprite)
   }
 }
