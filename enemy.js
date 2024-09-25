@@ -4,7 +4,7 @@ function Enemy (x, y, playField) {
   this.y = y
   this.width = 50
   this.height = 50
-  this.direcction = 0
+  this.direcction = 1
   this.speed = 10
   this.sprite = document.createElement('div')
 
@@ -17,4 +17,20 @@ function Enemy (x, y, playField) {
 
     playField.appendChild(this.sprite)
   }
+
+  this.move = function () {
+    let newY = self.y + self.speed * self.direcction
+    // Check playField limits
+    // playField width : 600py
+    // playField height : 800px
+    let yBotLimit = 800 - self.width
+    let yTopLimit = 0
+    if(newY <= yBotLimit && newY >= yTopLimit){
+      self.y = newY
+      self.sprite.style.top = self.y + 'px'
+      }
+
+  }
+
+  this.enemyMoveInterval = setInterval(this.move, 300)
 }

@@ -61,3 +61,8 @@
   - Obtain X coords to spawn with math.random
   - Save enemies on array.
   - SetInterval to continue enemySpawn.
+
+# 11. Adding Movement to Enemies.
+  - Add move to enemy.js
+  - Set movement range.
+  - set Interval for enemyMovement
