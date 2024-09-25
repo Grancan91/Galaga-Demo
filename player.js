@@ -6,6 +6,7 @@ function Player(x, y, playField) {
   this.height = 50
   this.direcction = 0
   this.speed = 10
+  this.isDead = false
   this.sprite = document.createElement('div')
 
   this.inserPlayer = function () {

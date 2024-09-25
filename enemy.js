@@ -33,7 +33,8 @@ function Enemy (x, y, playField, enemies) {
       self.y + self.height > player.y) {
       // collision detected!
       console.log('Catampum!')
-      self.removeEnemy()
+      //self.removeEnemy()
+      player.isDead = true
       }
   }
 

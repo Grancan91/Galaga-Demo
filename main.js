@@ -9,10 +9,26 @@ function startGame() {
 
   player.inserPlayer()
 
-  playerMoveInterval = setInterval(player.move, 50)
+  playerMoveInterval = setInterval(playerMove, 50)
 
   enemiesCreateInterval = setInterval(createEnemies, 2000)
   
+}
+
+function playerMove() {
+
+  if(player.isDead === false){
+    player.move()
+  } else {
+    clearInterval(playerMoveInterval)
+    clearInterval(enemiesCreateInterval)
+    enemies.forEach(function(enemy){
+      clearInterval(enemy.enemyMoveInterval)
+      playField.removeChild(enemy.sprite)
+    })
+    //window.alert('Game Over!')
+  }
+
 }
 
 function createEnemies() {

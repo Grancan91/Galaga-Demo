@@ -72,3 +72,9 @@
 
 # 13. Add Collision Logic
   - Create checkCollision Function
+
+# 14. Implement Collision with Player
+  - Add isDead property to Player
+  - Add isDead = true when Enemy hit player.
+  - Implement move logic on main.js when player is alive.
+  - Implement remove of enemies and player when is dead.
