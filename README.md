@@ -69,3 +69,6 @@
 
 # 12. Add Remove Enemy Function.
   - Add function to remove Enemy
+
+# 13. Add Collision Logic
+  - Create checkCollision Function

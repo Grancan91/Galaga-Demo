@@ -26,14 +26,25 @@ function Enemy (x, y, playField, enemies) {
     playField.removeChild(this.sprite)
   }
 
+  this.checkPlayerCollision = function () {
+    if ( self.x < player.x + player.width &&
+      self.y < player.y + player.height &&
+      self.x + self.width > player.x &&
+      self.y + self.height > player.y) {
+      // collision detected!
+      console.log('Catampum!')
+      self.removeEnemy()
+      }
+  }
+
   this.move = function () {
+    self.checkPlayerCollision()
     let newY = self.y + self.speed * self.direcction
     // Check playField limits
     // playField width : 600px
     // playField height : 700px
     let yBotLimit = 700 - self.height
     let yTopLimit = 0
-    console.log(newY)
     if(newY <= yBotLimit && newY >= yTopLimit){
       self.y = newY
       self.sprite.style.top = self.y + 'px'
