@@ -52,6 +52,12 @@ window.addEventListener('keydown', function(event) {
     case 'd':
       player.direcction = 1
       break;
+a
+      case ' ':
+        let bulletInitialPos = player.x + player.width / 2
+        let bullet = new Bullet(bulletInitialPos, 640, playField)
+        bullet.insertBullet()
+        break;
   }
 })
 

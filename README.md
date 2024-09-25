@@ -78,3 +78,10 @@
   - Add isDead = true when Enemy hit player.
   - Implement move logic on main.js when player is alive.
   - Implement remove of enemies and player when is dead.
+
+# 15. Implement Bullet
+  - Add key Event listener => " "
+  - Add Bullet Insert Method
+  - Insert in Event Listener
+  - Set position
+  - Aplly Style
