@@ -19,7 +19,7 @@ function startGame() {
   player = new Player(275, 650, playField)
   player.inserPlayer()
 
-  playerMoveInterval = setInterval(playerMove, 50)
+  playerMoveInterval = setInterval(playerMove, 16)
   enemiesCreateInterval = setInterval(createEnemies, 2000)
   
 }
